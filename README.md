@@ -10,6 +10,14 @@ Criação de Script Bash para automatizar o provisionamento da infraestrutura (c
 - Os usuários de cada grupo terão permissão total dentro de seu respectivo diretório; e
 - Os usuários não poderão ter permissão de leitura, escrita e execução em diretórios de departamentos que eles não pertencem.
 
+| Diretórios   | Grupos       | Usuários                           |
+| :---------- | :--------- | :---------------------------------- |
+| `/publico` | `todos` | `todos` |
+| `/adm` | `GRP_ADM` | `carlos, maria, joao` |
+| `/ven` | `GRP_VEN` | `debora, sebastiana, roberto` |
+| `/sec` | `GRP_SEC` | `josefina, amanda, rogerio` |
+
+
 ## Tecnologias e Ferramentas Utilizadas
 
 ![Debian GNU/Linux](https://img.shields.io/badge/Debian-35495E?style=for-the-badge&logo=debian&logoColor=E44C30)
