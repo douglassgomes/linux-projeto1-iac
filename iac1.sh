@@ -17,26 +17,24 @@ echo "Grupos criados com sucesso!"
 echo ""
 
 # Criação dos usuários do grupo GRP_ADM
-# Tive que remover o parâmetro -crypt pois não criava os usuários e retornava o seguinte erro:
-# passwd: Unknown opition: -crypt
 echo "Criando usuários do grupo GRP_ADM (carlos, maria e joao)..."
-useradd  carlos -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_ADM
-useradd  maria -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_ADM
-useradd  joao -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_ADM
+useradd  carlos -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_ADM
+useradd  maria -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_ADM
+useradd  joao -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_ADM
 echo "Usuários do grupo GRP_ADM criados com sucesso!"
 
 # Criação dos usuários do grupo GRP_VEN
 echo "Criando usuários do grupo GRP_VEN (debora, sebastiana e roberto)"
-useradd  debora -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_VEN
-useradd  sebastiana -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_VEN
-useradd  roberto -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_VEN
+useradd  debora -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_VEN
+useradd  sebastiana -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_VEN
+useradd  roberto -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_VEN
 echo "Usuários do grupo GRP_VEN criados com sucesso!"
 
 # Criação de usuários do grupo GRP_SEC
 echo "Criando usuários do grupo GRP_SEC (josefina, amanda e rogério)"
-useradd  josefina -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_SEC
-useradd  amanda -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_SEC
-useradd  rogerio -m -s /bin/bash -p $(openssl passwd Senha123) -G GRP_SEC
+useradd  josefina -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_SEC
+useradd  amanda -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_SEC
+useradd  rogerio -m -s /bin/bash -p $(openssl passwd -6 Senha123) -G GRP_SEC
 echo "Usuários do grupo GRP_SEC criados com sucesso!"
 echo ""
 
